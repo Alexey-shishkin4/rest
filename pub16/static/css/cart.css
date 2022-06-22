@@ -1,0 +1,81 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 808px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 500;
+  margin: 48px auto 0 0;
+}
+
+.u-section-1 .u-group-1 {
+  min-height: 436px;
+  margin-top: 48px;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-table-1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-table-header-1 {
+  font-weight: 700;
+  background-image: none;
+}
+
+.u-section-1 .u-image-1 {
+  width: 85px;
+  height: 85px;
+  margin: -383px auto 0 99px;
+}
+
+.u-section-1 .u-btn-1 {
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin: -67px auto 0 6px;
+  padding: 11px 5px 12px 4px;
+}
+
+.u-section-1 .u-table-2 {
+  width: 433px;
+  height: 47px;
+  margin: 48px 0 0 auto;
+}
+
+.u-block-11b0-109 {
+  height: 46px;
+}
+
+.u-section-1 .u-table-cell-31 {
+  font-weight: 500;
+}
+
+.u-block-11b0-116 {
+  height: 46px;
+}
+
+.u-section-1 .u-btn-2 {
+  border-style: solid;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin: 11px 0 60px auto;
+  padding: 10px 111px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-btn-1 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-2 {
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-table-2 {
+    width: 340px;
+  }
+}

@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Корзина">
+    <meta name="description" content="">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <meta name="generator" content="Nicepage 4.12.17, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/pub16.png",
+		"sameAs": [
+				"https://instagram.com/name"
+		]
+}</script>
+<style type="text/css">
+  .row {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .number {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+  }
+  .number input[type="number"] {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+  }
+  .number input[type="number"]::-webkit-outer-spin-button,
+  .number input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  .number-minus {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    width: 20px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    border-right: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .number-plus {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 20px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  </style>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Корзина">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode">{% include "includes/header.html" %}
+    <section class="u-clearfix u-section-1" id="sec-46bd">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Корзина</h1>
+        <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
+          <div class="u-container-layout">
+            <div class="u-expanded-width u-table u-table-responsive u-table-1">
+              <table class="u-table-entity">
+                <colgroup>
+                  <col width="6.29%">
+                  <col width="8.73%">
+                  <col width="46.72%">
+                  <col width="12.75%">
+                  <col width="12.75%">
+                  <col width="12.75%">
+                </colgroup>
+                <thead class="u-black u-table-header u-table-header-1">
+                  <tr style="height: 49px;">
+                    <th class="u-border-1 u-border-black u-table-cell">Удалить</th>
+                    <th class="u-border-1 u-border-black u-table-cell"></th>
+                    <th class="u-border-1 u-border-black u-table-cell">Товар</th>
+                    <th class="u-border-1 u-border-black u-table-cell">Цена</th>
+                    <th class="u-border-1 u-border-black u-table-cell">Кол-во</th>
+                    <th class="u-border-1 u-border-black u-table-cell">Стоимость</th>
+                  </tr>
+                </thead>
+                <tbody class="u-table-body">
+                  {% for item in cart%}
+                    {% with product=item.product %}
+                    {% if product %}
+                    <tr style="height: 97px;">
+                      <td class="u-border-2 u-border-grey-30 u-border-no-left u-border-no-right u-table-cell">
+                        <a href="{% url 'cart:cart_remove' product.id%}" class="u-border-2 u-border-black u-border-hover-black u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-hover-grey-5 u-none u-radius-0 u-text-black u-text-hover-black u-top-left-radius-0 u-top-right-radius-0 u-btn-1">Удалить</a></td>
+                      <td class="u-border-2 u-border-grey-30 u-border-no-left u-border-no-right u-table-cell"><img src="{{product.get_image_1024x1280.url}}" width="100" height="100"></td>
+                      <td class="u-border-2 u-border-grey-30 u-border-no-left u-border-no-right u-table-cell">{{product.name}}</td>
+                      <td class="u-border-2 u-border-grey-30 u-border-no-left u-border-no-right u-table-cell">{{item.price}}р.</td>
+                      <td class="u-border-2 u-border-grey-30 u-border-no-left u-border-no-right u-table-cell">
+                        <div class="row">
+                          <div class="number">
+                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                              <button class="number-minus" type="sumbit" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                              {{item.update_quantity_form.quantity}}
+                              <button class="number-plus" type="sumbit" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+                              {% csrf_token %}
+                            </form>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="u-border-2 u-border-grey-30 u-border-no-left u-border-no-right u-table-cell">{{item.total_price}}р.</td>
+                    </tr>
+                    {% endif %}
+                    {% endwith %} 
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <!--<img class="u-image u-image-default u-image-1" src="images/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg" alt="" data-image-width="626" data-image-height="598">-->
+          </div>
+        </div>
+        <div class="u-table u-table-responsive u-table-2">
+          <table class="u-table-entity">
+            <colgroup>
+              <col width="50%">
+              <col width="50%">
+            </colgroup>
+            <tbody class="u-table-body">
+              <tr style="height: 44px;">
+                <td class="u-black u-border-1 u-border-grey-dark-1 u-custom-font u-first-column u-font-roboto u-table-cell u-table-cell-31">Итого</td>
+                <td class="u-border-1 u-border-grey-dark-1 u-table-cell">{{total_price}}р.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a href="{% url  "cart:delivery_page" %}" class="u-border-1 u-border-black u-btn u-button-style u-custom-font u-font-roboto u-hover-black u-none u-text-hover-white u-btn-2">Перейти к оформлению</a>
+      </div>
+    </section>
+    
+    
+    {% include "includes/footer.html" %}
+  </body>
+</html>

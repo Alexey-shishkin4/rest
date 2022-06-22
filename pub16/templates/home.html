@@ -1,0 +1,225 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Бар в самом центре Б​арнаула, О заведении, Случайные вкусные блюда, Полное меню паба, Фотогалерея, Контактная информация">
+    <meta name="description" content="">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <meta name="generator" content="Nicepage 4.12.17, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/pub16.png",
+		"sameAs": [
+				"https://instagram.com/name"
+		]
+}</script>
+<style>
+  .u-section-1 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url( "{% static 'images/1.jpg' %}");
+    background-position: 50% 50%;
+  }
+  .u-section-4 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url( "{% static 'images/d970a2ff-2fcd-b1d8-8722-04b25514b4ec.png' %}");
+    background-position: 50% 50%;
+  }
+  .u-section-5 .u-image-1 {
+    min-height: 573px;
+    background-image: url("{% static  "images/photo16553921235.jpeg" %}");
+    background-position: 50% 50%;
+  }
+  .u-section-5 .u-image-3 {
+    min-height: 296px;
+    background-image: url("{% static "images/photo16553921203.jpeg" %}");
+    background-position: 50% 50%;
+  }
+  .u-section-5 .u-image-2 {
+    min-height: 277px;
+    background-image: url("{% static "images/photo16553921178.jpeg" %}");
+    background-position: 50% 50%;
+  }
+  .u-section-5 .u-image-1 {
+    min-height: 423px;
+    background-image: url("{% static "images/photo16553921235.jpeg" %}");
+    background-position: 50% 50%;
+  }
+</style>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Главная">
+    <meta property="og:type" content="website">
+  </head>
+  
+  <style>
+  .button {
+    z-index: 100; 
+    position: relative;
+  }
+  
+  #delegar {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+  }
+  </style>
+  <div class="button">
+    <a type="button" id="delegar" href="{% url 'cart:cart_detail'%}">
+      <img src="{% static "images/cart.png" %}" width="50" height="50">
+    </a>
+  </div>
+
+  <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode">
+    {% include "includes/header.html" %}
+    <section class="skrollable u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="1280" data-image-height="720" id="sec-6b19">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-title u-text-1">Бар в самом центре Б​арнаула</h1>
+        <p class="u-custom-font u-large-text u-text u-text-variant u-text-2">Проспект Строителей, 16</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-5 u-section-2" id="sec-ae46">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h1 class="u-align-center u-text u-text-default u-text-1">О заведении<br>
+                  </h1>
+                  <p class="u-align-left u-custom-font u-text u-text-default u-text-2"> Адрес: пр-т Строителей, 16<br>Забронировать стол: ​+7 (3852) 53-24-66<br>Время работы: 11:00–01:00
+                  </p>
+                  <a href="{% url 'news-page' %}" class="u-black u-border-none u-btn u-btn-round u-button-style u-hover-grey-70 u-radius-6 u-btn-1">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <p class="u-custom-font u-font-roboto u-text u-text-default u-text-3">"16 pub" - паб в самом центре Барнаула.<br> Каждый день мы стараемся создавать для Вас уют и домашнюю атмосферу.<br> Наши повара и гостеприимные официанты сделают Ваш обед или ужин незабываемым.<br> Мы предлагаем огромный выбор закусок, супов, салатов и мяса на огне.<br> Каждое блюдо в меню разрабатывается профессионалами, что гарантирует уникальный вкус.<br>Мы также подаем напитки и кальяны, чтобы сделать Ваш вечер еще приятнее.<br>
+                    Приходите и наслаждайтесь, а мы сделаем всё остальное!
+                  </p>
+                  <p class="u-custom-font u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000"> &nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-087c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-center u-text u-text-default u-text-1">Случайные вкусные блюда<br>
+        </h1>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            {% for i in dishes%}
+            <div class="u-container-style u-list-item u-repeater-item u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <img class="u-align-center u-image u-image-default u-preserve-proportions u-image-1" src="{{i.get_image_1024x1280.url}}" alt="" data-image-width="150" data-image-height="100">
+                <p class="u-align-center u-custom-font u-text u-text-default u-text-2">{{i.name}}<br>
+                </p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-image u-shading u-section-4" src="" data-image-width="1280" data-image-height="720" id="carousel_00ae">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-grey-5 u-title u-text-1">Полное меню паба<br>
+        </h1>
+        <p class="u-custom-font u-large-text u-text u-text-grey-5 u-text-variant u-text-2"> Обновленное меню с огромным выбором авторских блюд из МЯСА на огне</p>
+        <a href="{% url 'menu-page'%}" class="u-black u-border-none u-btn u-btn-round u-button-style u-hover-grey-70 u-radius-6 u-btn-1">МЕНЮ</a>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-5 u-section-5" id="sec-dcd0">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Фотогалерея<br>
+        </h1>
+        <p class="u-align-center u-custom-font u-text u-text-2">Следите за жизнью паба с помощью нашей галереи</p>
+        <div class="u-align-center u-clearfix u-gutter-16 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-align-center u-container-style u-image u-layout-cell u-left-cell u-size-60 u-image-1" src="" data-image-width="1024" data-image-height="1280">
+                    <div class="u-container-layout u-valign-top u-container-layout-1"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-col">
+                  <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-2" src="" data-image-width="1024" data-image-height="1280">
+                    <div class="u-container-layout u-valign-top u-container-layout-2"></div>
+                  </div>
+                  <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-3" src="" data-image-width="1024" data-image-height="1280">
+                    <div class="u-container-layout u-valign-bottom u-container-layout-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{% url "gallery-page" %}" class="u-black u-border-none u-btn u-btn-round u-button-style u-hover-grey-70 u-radius-6 u-btn-1">ВСЕ ФОТО</a>
+      </div>
+    </section>
+    <section class="u-black u-clearfix u-section-6" id="sec-d160">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-grey-5 u-text-1">Наши события</h3>
+        <p class="u-align-center u-custom-font u-text u-text-grey-5 u-text-2">Мы постоянно проводим интересные события, вечеринки и стендапы. Приходите!</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            {% for item in news %}
+            <div class="u-black u-container-style u-list-item u-repeater-item u-video-cover u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                <img alt="" class="u-expanded-width u-image u-image-default u-image-1" data-image-width="2836" data-image-height="1875" src="{{item.get_image_1024x1280.url}}">
+                <h3 class="u-text u-text-default u-text-grey-5 u-text-3">{{item.title}}</h3>
+                <p class="u-custom-font u-text u-text-custom-color-1 u-text-default u-text-4">{{item.published_date}}<br>
+                </p>
+                <p class="u-text u-text-grey-5 u-text-5">{{item.text|truncatewords:15}}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <a href="{% url 'news-page' %}" class="u-black u-border-3 u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-grey-70 u-radius-6 u-text-hover-white u-text-white u-btn-1">Все события</a>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-10 u-section-7" id="sec-9393">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                <div class="u-container-layout u-container-layout-1">
+                  <h2 class="u-text u-text-1">Контактная информация</h2>
+                  <p class="u-custom-font u-font-roboto u-text u-text-2"> Телефон: +7 (3852) 53-24-66<br>Адрес: г. Барнаул, пр-т Строителей, 16<br>Время работы: 11:00–01:00.<br>
+                  </p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <div class="u-expanded u-grey-10 u-map u-map-1">
+                    <div class="embed-responsive">
+                      <iframe class="embed-responsive-item" src="//maps.google.com/maps?output=embed&amp;q=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%91%D0%B0%D1%80%D0%BD%D0%B0%D1%83%D0%BB%2C%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9%2C%2016&amp;z=16&amp;t=m" data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMiVEMCVBMCVEMCVCRSVEMSU4MSVEMSU4MSVEMCVCOCVEMSU4RiUyQyUyMCVEMCU5MSVEMCVCMCVEMSU4MCVEMCVCRCVEMCVCMCVEMSU4MyVEMCVCQiUyQyUyMCVEMSU4MSVEMSU4MiVEMSU4MCVEMCVCRSVEMCVCOCVEMSU4MiVEMCVCNSVEMCVCQiVEMCVCNSVEMCVCOSUyQyUyMDE2JTIyJTJDJTIyem9vbSUyMiUzQTE2JTJDJTIydHlwZUlkJTIyJTNBJTIycm9hZCUyMiUyQyUyMmxhbmclMjIlM0FudWxsJTJDJTIyYXBpS2V5JTIyJTNBbnVsbCUyQyUyMm1hcmtlcnMlMjIlM0ElNUIlNUQlN0Q="></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "includes/footer.html" %}
+  </body>
+</html>

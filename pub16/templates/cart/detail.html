@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Главная</title>
+{% endblock %}
+
+{% block content %}
+<h1>Корзина</h1>
+{% for item in cart%}
+  {% with product=item.product %}
+  <p>{{product.name}}</p>
+  {% if product %}
+  <div>
+    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+        {{item.update_quantity_form.quantity}}
+        {{ item.update_quantity_form.update }}
+        <button type="sumbit">Обновить</button>
+        {% csrf_token %}
+    </form>
+  </div>
+  {% else %}
+  <p>нет!!№!№!</p>
+  {% endif%}
+  {% if product %}
+  <p><a href="{% url 'cart:cart_remove' product.id%}">Удалить</a></p>
+  {% endif%}
+  {% if product.upload %}
+  <img src="{{product.get_image_400x300.url}}">
+  {% endif %}
+  <!--<p>{{item.quantity}}</p>-->
+  <p>{{item.price}}</p>
+  <p>{{item.total_price}}</p>
+  {% endwith %} 
+{% endfor %}
+<a href="#" class="button">Оформить</a>
+{% endblock %}

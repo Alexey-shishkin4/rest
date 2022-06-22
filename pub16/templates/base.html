@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {% block title %} Заголовок {% endblock title %}
+  </head>
+  <body>
+    {% include "includes/header.html" %}
+    <main>
+        {% block content %} Дефолтный контент {% endblock content %}
+    </main>
+    {% include "includes/footer.html" %}
+  </body>
+</html>
