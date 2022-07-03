@@ -15,7 +15,8 @@
     <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
     <meta name="generator" content="Nicepage 4.12.17, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    
     
     
     
@@ -30,49 +31,35 @@
 				"https://instagram.com/name"
 		]
 }</script>
-  <style>
-    .u-section-1 {
-      background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url( "{% static 'images/ddaf90b6-711e-7d0f-c006-a9b1df9d4bc1.png' %}");
-      background-position: 50% 50%;
-    }
-    .u-section-2 .u-image-1 {
-      min-height: 419px;
-      background-position: 50% 50%;
-    }
-    .u-section-3 .u-image-1 {
-      min-height: 419px;
-      background-position: 50% 50%;
-    }
-    .u-section-4 .u-image-1 {
-      min-height: 419px;
-      background-position: 50% 50%;
-    }
-  </style>
+<style>
+  .u-section-1 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url( "{% static 'images/ddaf90b6-711e-7d0f-c006-a9b1df9d4bc1.png' %}");
+    background-position: 50% 50%;
+  }
+  .u-section-2 .u-image-1 {
+    min-height: 419px;
+    background-image: url("{{news1.get_image_1024x1280.url}}");
+    background-position: 50% 50%;
+  }
+  .u-section-3 .u-image-1 {
+    min-height: 419px;
+    background-image: url("{{news2.get_image_1024x1280.url}}");
+    background-position: 50% 50%;
+  }
+  .u-section-4 .u-image-1 {
+    min-height: 349px;
+    background-image: url("{{news3.get_image_1024x1280.url}}");
+    background-position: 50% 50%;
+  }
+</style>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="События">
     <meta property="og:type" content="website">
   </head>
-  <style>
-    .button {
-      z-index: 100; 
-      position: relative;
-    }
-    
-    #delegar {
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-    }
-    </style>
-    <div class="button">
-      <a type="button" id="delegar" href="{% url 'cart:cart_detail'%}">
-        <img src="{% static "images/cart.png" %}" width="50" height="50">
-      </a>
-    </div>
   <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode">{% include "includes/header.html" %}
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="1280" data-image-height="720" id="sec-f8c1">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-title u-text-1">События в пабе</h1>
+        <h1 class="u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-title u-text-1">События в пабе</h1>
         <p class="u-custom-font u-font-roboto u-large-text u-text u-text-variant u-text-2"> Специально для Вас мы регулярно организуем тематические вечеринки, музыкальные мероприятия и стенд-апы. За новостями и анонсами мероприятий следите на сайте и в инстаграме.</p>
       </div>
     </section>
@@ -90,30 +77,31 @@
                     </div>
                   </div>
                   <div class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="" data-image-width="1080" data-image-height="1080">
-                    <img class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="{{news1.get_image_1024x1280.url}}" width="600" height="700">
-                    <div class="u-container-layout u-container-layout-2"></div>
+                    <!--<img class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="{{news1.get_image_1024x1280.url}}" width="500" height="500">
+                    --><div class="u-container-layout u-container-layout-2"></div>
                   </div>
                 </div>
               </div>
               <div class="u-size-30 u-size-60-md">
                 <div class="u-layout-col">
-                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
                     <div class="u-container-layout u-valign-top u-container-layout-3">
                       <h4 class="u-text u-text-custom-color-2 u-text-default u-text-2">Описание</h4>
-                      <p class="u-custom-font u-font-roboto u-text u-text-3">{{news1.text}}</p>
+                      <p class="u-custom-font u-font-roboto u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1250">{{news1.text}}
+                      </p>
                       <br>
-                      <p class="u-custom-font u-font-roboto u-text u-text-3">Дата публикации: {{news1.published_date}}</p>
+                      <p class="u-custom-font u-font-roboto u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1250">Дата публикации: {{news1.published_date}}</p>
                     </div>
                   </div>
-                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-4">
                     <div class="u-container-layout u-valign-middle u-container-layout-4">
                       <h4 class="u-text u-text-custom-color-2 u-text-4">Информация</h4>
-                      <p class="u-custom-font u-font-roboto u-text u-text-5">Где и когда: {{news1.when}} в пабе "16pub"
+                      <p class="u-custom-font u-font-roboto u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1250">Где и когда: {{news1.when}} в пабе "16pub"
                         {% if news1.entrance %}
                         <br>Вход: {{news1.entrance}}
                         {% endif %}
                         <br>Телефон: +7 (3852) 53-24-66
-                        <br>Успейте забронировать стол, количество мест ограничено.<br>
+                        <br>Успейте забронировать стол, количество мест ограничено.
                         <br>
                       </p>
                     </div>
@@ -127,47 +115,46 @@
     </section>
     {% endif %}
     {% if news2 %}
-    <section class="u-black u-clearfix u-color-scheme-u10 u-color-style-multicolor-1 u-section-3" id="carousel_8530">
-      <div class="u-clearfix u-sheet u-sheet-1">
+    <section class="u-black u-clearfix u-color-scheme-u10 u-color-style-multicolor-1 u-section-3" id="carousel_af8b">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-8 u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
               <div class="u-size-30 u-size-60-md">
                 <div class="u-layout-col">
-                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000">
-                    <div class="u-container-layout u-valign-top u-container-layout-1">
-                      <h4 class="u-text u-text-custom-color-1 u-text-default u-text-1">Описание</h4>
-                      <p class="u-custom-font u-font-roboto u-text u-text-2">{{news2.text}}</p>
-                      <br>
-                      <p class="u-custom-font u-font-roboto u-text u-text-2">Дата публикации: {{news2.published_date}}</p>
+                  <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-40 u-layout-cell-1">
+                    <div class="u-container-layout u-container-layout-1">
+                      <h2 class="u-text u-text-1">{{news2.title}}</h2>
                     </div>
                   </div>
-                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
-                    <div class="u-container-layout u-container-layout-2">
-                      <h4 class="u-text u-text-custom-color-1 u-text-3">Информация</h4>
-                      <p class="u-custom-font u-font-roboto u-text u-text-4">Где и когда: {{news2.when}} в пабе "16pub"
-                        {% if news2.entrance %}
-                        <br>Вход: {{news2.entrance}}
-                        {% endif %}
-                        <br>Телефон: +7 (3852) 53-24-66
-                        <br>Успейте забронировать стол, количество мест ограничено.<br>
-                        <br>
-                        <br>
-                      </p>
-                    </div>
+                  <div class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="" data-image-width="1080" data-image-height="1080">
+                    <!--<img class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="{{news2.get_image_1024x1280.url}}"  width="500" height="500">
+                    --><div class="u-container-layout u-container-layout-2"></div>
                   </div>
                 </div>
               </div>
               <div class="u-size-30 u-size-60-md">
                 <div class="u-layout-col">
-                  <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-40 u-layout-cell-3">
-                    <div class="u-container-layout u-container-layout-3">
-                      <h2 class="u-text u-text-5">{{news2.title}}</h2>
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
+                    <div class="u-container-layout u-valign-top u-container-layout-3">
+                      <h4 class="u-text u-text-custom-color-2 u-text-default u-text-2">Описание</h4>
+                      <p class="u-custom-font u-font-roboto u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1250">{{news2.text}}</p>
+                      <br>
+                      <p class="u-custom-font u-font-roboto u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1250">Дата публикации: {{news2.published_date}}</p>
                     </div>
                   </div>
-                  <div class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="" data-image-width="1080" data-image-height="1080">
-                    <img class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="{{news2.get_image_1024x1280.url}}"  width="600" height="700">
-                    <div class="u-container-layout u-container-layout-4"></div>
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-4">
+                    <div class="u-container-layout u-valign-middle u-container-layout-4">
+                      <h4 class="u-text u-text-custom-color-2 u-text-4">Информация</h4>
+                      <p class="u-custom-font u-font-roboto u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1250">Где и когда: {{news2.when}} в пабе "16pub"
+                        {% if news2.entrance %}
+                        <br>Вход: {{news2.entrance}}
+                        {% endif %}
+                        <br>Телефон: +7 (3852) 53-24-66
+                        <br>Успейте забронировать стол, количество мест ограничено.
+                        <br>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -178,7 +165,7 @@
     </section>
     {% endif %}
     {% if news3 %}
-    <section class="u-clearfix u-color-scheme-u10 u-color-style-multicolor-1 u-section-2" id="sec-7756">
+    <section class="u-clearfix u-color-scheme-u10 u-color-style-multicolor-1 u-section-4" id="carousel_d64c">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-8 u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
@@ -191,30 +178,30 @@
                     </div>
                   </div>
                   <div class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="" data-image-width="1080" data-image-height="1080">
-                    <img class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="{{news3.get_image_1024x1280.url}}"  width="600" height="700">
-                    <div class="u-container-layout u-container-layout-2"></div>
+                    <!--<img class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" src="{{news3.get_image_1024x1280.url}}"  width="500" height="500">
+                    --><div class="u-container-layout u-container-layout-2"></div>
                   </div>
                 </div>
               </div>
               <div class="u-size-30 u-size-60-md">
                 <div class="u-layout-col">
-                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
                     <div class="u-container-layout u-valign-top u-container-layout-3">
                       <h4 class="u-text u-text-custom-color-2 u-text-default u-text-2">Описание</h4>
-                      <p class="u-custom-font u-font-roboto u-text u-text-3">{{news3.text}}</p>
+                      <p class="u-custom-font u-font-roboto u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1250">{{news3.text}}</p>
                       <br>
-                      <p class="u-custom-font u-font-roboto u-text u-text-3">Дата публикации: {{news3.published_date}}</p>
+                      <p class="u-custom-font u-font-roboto u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1250">Дата публикации: {{news3.published_date}}</p>
                     </div>
                   </div>
-                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-4">
                     <div class="u-container-layout u-valign-middle u-container-layout-4">
                       <h4 class="u-text u-text-custom-color-2 u-text-4">Информация</h4>
-                      <p class="u-custom-font u-font-roboto u-text u-text-5">Где и когда: {{news3.when}} в пабе "16pub"
+                      <p class="u-custom-font u-font-roboto u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1250">Где и когда: {{news3.when}} в пабе "16pub"
                         {% if news3.entrance %}
                         <br>Вход: {{news3.entrance}}
                         {% endif %}
                         <br>Телефон: +7 (3852) 53-24-66
-                        <br>Успейте забронировать стол, количество мест ограничено.<br>
+                        <br>Успейте забронировать стол, количество мест ограничено.
                         <br>
                       </p>
                     </div>
@@ -227,6 +214,9 @@
       </div>
     </section>
     {% endif %}
+    
+    
+    
     {% include "includes/footer.html" %}
   </body>
 </html>

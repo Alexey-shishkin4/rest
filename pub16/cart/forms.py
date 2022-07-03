@@ -32,24 +32,15 @@ class DeliveyForm(forms.Form):
         'class': 'u-border-1 u-border-grey-30 u-input u-input-rectangle',
         'required': ''
     }))
-    email = forms.EmailField(widget=forms.TextInput(attrs={
-        'type': 'email',
-        'placeholder': 'Email',
+
+    table = forms.EmailField(widget=forms.TextInput(attrs={
+        'placeholder': 'Столик',
         'id': 'email-6797',
-        'name': 'email',
+        'name': 'table',
         'class': 'u-border-1 u-border-grey-30 u-input u-input-rectangle',
         'required': ''
     }
     ))
-    addres = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder': 'Адрес',
-        'rows': '4',
-        'cols': '50',
-        'id': 'message-6797',
-        'name': 'message',
-        'class': 'u-border-1 u-border-grey-30 u-input u-input-rectangle',
-        'required': ''
-    }))
     phone = forms.CharField(widget=forms.TextInput(attrs={
         'type': 'tel',
         'pattern': '\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})',

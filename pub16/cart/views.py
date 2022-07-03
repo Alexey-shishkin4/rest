@@ -70,10 +70,14 @@ def delivery_form(request):
     if form.is_valid():
         cd = form.cleaned_data
         name = cd['name']
-        email = cd['email']
-        addres = cd['addres']
+        table = cd['table']
         phone = cd['phone']
-        created = Orders.objects.update_or_create(name=name, email=email, addres=addres, phone=phone)
+        created = Orders.objects.update_or_create(name=name, table=table, phone=phone)
         return redirect(reverse('cart:pay_fondy'))
     context = {'form': form}
+    return render(request, template, context)
+
+def succes(request):
+    template = 'succes.html'
+    context = {}
     return render(request, template, context)
