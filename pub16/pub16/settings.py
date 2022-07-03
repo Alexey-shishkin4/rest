@@ -8,11 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'secret')
 DEBUG = eval(os.getenv('DEBUG', 'True'))
 
-ALLOWED_HOSTS = (
-    '127.0.0.1',
-    'localhost'
-)
-
+ALLOWED_HOSTS = ('Djazzy.pythonanywhere.com',)
 
 # Application definition
 
@@ -107,12 +103,13 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/Djazzy/rest/pub16/assets' 
 
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),
 ]
 
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = '/home/Djazzy/rest/pub16/media'
 MEDIA_URL = '/media/'
 LOGIN_URL = '/auth/login/'
 LOGIN_REDIRECT_URL = '/'
